@@ -9,3 +9,20 @@ Supported platforms:
 * maybe others?
 
 If you have multiple controllers connected at the same time, this software will combine their inputs.
+
+## Build (Fedora 43)
+
+Dependencies:
+
+```
+sudo dnf install gcc-c++ make qt5-qtbase-devel qt5-qtgamepad-devel
+```
+
+Build:
+
+```
+mkdir -p build
+cd build
+qmake-qt5 ../InputRedirectionClient-Qt.pro
+make -j"$(nproc)"
+```
